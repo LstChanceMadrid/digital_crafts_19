@@ -7,14 +7,19 @@ def prime(valid):
         print("Not a prime number")
     elif (valid == 2):
         print("Prime number")
-    for number in range(2, valid):
-        if (valid % number) == 0:
-            print("Not a prime number")
-            break
-        else:
-            print("Prime number")
-            break
+    else:
+        next(valid)
 
+def next(number):
+    instance = 1
+    for index in range(2, number):
+        if (number % index == 0):
+            instance += 1
+
+    if (instance > 1):
+        print("Not a prime number")
+    else:
+        print("Prime number")
 
 
 prime(user_input)
